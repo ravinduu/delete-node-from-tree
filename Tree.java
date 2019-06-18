@@ -109,13 +109,12 @@ public class Tree{
     deleteNode(root,data);
   }
   private static Node deleteNode(Node node, int data){
-	  Node parent = null;
-		Node curr = node;
-
-		while (curr != null && curr.getData() != data){
-			parent = curr;
-			if (data < curr.getData()) {
-				curr = curr.left;
+    Node parent = null;
+    Node curr = node;
+	while (curr != null && curr.getData() != data){
+	  parent = curr;
+	  if (data < curr.getData()) {
+		curr = curr.left;
 			}
 			else {
 				curr = curr.right;
